@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 
 ThemeData ligthTheme=ThemeData(
           colorScheme: ColorScheme(
-              primary: Colors.yellow,
+              primary: Color.fromARGB(255,246,138,186),
               primaryVariant: Colors.yellowAccent,
               secondary: Colors.green,
               secondaryVariant:  Colors.greenAccent,
-              surface: Colors.black,
-              background: Colors.purple,
+              surface: Colors.white,
+              background: Color.fromARGB(255,246,138,186),
               error: Colors.red,
               onPrimary: Colors.black,
               onSecondary: Colors.black,
               onSurface: Colors.black,
               onBackground: Colors.black,
               onError: Colors.black,
-              brightness: Brightness.light));
+              brightness: Brightness.light)
+              );
 
 
 ThemeData darkTheme=ThemeData(
