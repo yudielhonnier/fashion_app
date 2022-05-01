@@ -66,7 +66,9 @@ class HomeScreen extends StatelessWidget {
             height: size.height*0.09,
            
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/search');
+                  },
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(

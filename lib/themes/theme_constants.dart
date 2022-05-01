@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 ThemeData ligthTheme=ThemeData(
           colorScheme: ColorScheme(
               primary: Color.fromARGB(255,246,138,186),
-              primaryVariant: Colors.yellowAccent,
-              secondary: Colors.green,
+              primaryVariant:  Color.fromARGB(255,220,75,140),
+              secondary: Color.fromARGB(255,244,201,223),
               secondaryVariant:  Colors.greenAccent,
               surface: Colors.white,
               background: Color.fromARGB(255,246,138,186),
