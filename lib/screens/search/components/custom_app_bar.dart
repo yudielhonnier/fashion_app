@@ -35,11 +35,20 @@ class CustomAppbar extends StatelessWidget {
               ],
             ),
             Expanded(child: Container()),
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/rico.jpg'),
-              radius: 25,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: CircleAvatar(
+                backgroundColor: Color.fromARGB(255, 254, 239, 247),
+                radius: 28,
+                child:   CircleAvatar(
+                backgroundImage: AssetImage('assets/6.jpg'),
+                radius: 25,
+              ),
+              ),
             ),
-             SizedBox(width: size.width*0.1,),
+             SizedBox(width: size.width*0.05,),
           ],
         );
      

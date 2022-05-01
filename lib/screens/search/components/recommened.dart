@@ -11,37 +11,33 @@ class Recommened extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      padding: EdgeInsets.only(left: size.width*0.05),
+      // color: Colors.red,
+      // padding: EdgeInsets.only(left: size.width * 0.05),
       height: size.height * 0.14,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
+          SizedBox(width: size.width * 0.04),
           CircleAvatar(
-            radius: 58 ,
-            backgroundImage: AssetImage('assets/rico.jpg'),
+            radius: 58,
+            backgroundImage: AssetImage('assets/5.jpg'),
           ),
-
-          VerticalDivider(),
+          SizedBox(width: size.width * 0.04),
           CircleAvatar(
-            radius: 58 ,
-            backgroundImage: AssetImage('assets/rico.jpg'),
+            radius: 58,
+            backgroundImage: AssetImage('assets/5.jpg'),
           ),
-
-          VerticalDivider(),
+          SizedBox(width: size.width * 0.04),
           CircleAvatar(
-            radius: 58 ,
-            backgroundImage: AssetImage('assets/rico.jpg'),
+            radius: 58,
+            backgroundImage: AssetImage('assets/5.jpg'),
           ),
-
-          VerticalDivider(),
+          SizedBox(width: size.width * 0.04),
           CircleAvatar(
-            radius: 58 ,
-            backgroundImage: AssetImage('assets/rico.jpg'),
+            radius: 58,
+            backgroundImage: AssetImage('assets/5.jpg'),
           ),
-
           VerticalDivider(),
-         
         ],
       ),
     );
