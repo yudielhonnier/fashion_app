@@ -11,7 +11,7 @@ class ClothesCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // padding: EdgeInsets.only(left: size.width * 0.04),
       height: size.height * 0.3,
       child: ListView(
@@ -21,7 +21,7 @@ class ClothesCards extends StatelessWidget {
             padding: EdgeInsets.only(left: size.width * 0.04),
             width: size.width * 0.65,
             child: GestureDetector(
-              onTap: ()=>Navigator.pushNamed(context, '/clothes'),
+              onTap: () => Navigator.pushNamed(context, '/clothes'),
               child: Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
@@ -31,12 +31,12 @@ class ClothesCards extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ClipRRect(
-                      borderRadius:
-                          BorderRadius.vertical(top: Radius.circular(25.0)),
+                      borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(25.0)),
                       child: Image(
                         fit: BoxFit.cover,
                         height: size.height * 0.2,
-                        image: AssetImage('assets/3.jpg'),
+                        image: const AssetImage('assets/3.jpg'),
                       ),
                     ),
                     SizedBox(
@@ -48,7 +48,7 @@ class ClothesCards extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -78,8 +78,8 @@ class ClothesCards extends StatelessWidget {
                           Expanded(child: Container()),
                           Container(
                             height: size.width * 0.1,
-                            margin: EdgeInsets.all(0),
-                            child: Column(
+                            margin: const EdgeInsets.all(0),
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
@@ -122,12 +122,12 @@ class ClothesCards extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(25.0)),
+                        const BorderRadius.vertical(top: Radius.circular(25.0)),
                     child: Image(
                       fit: BoxFit.cover,
                       height: size.height * 0.2,
                       width: size.width,
-                      image: AssetImage('assets/2.jpg'),
+                      image: const AssetImage('assets/2.jpg'),
                     ),
                   ),
                   SizedBox(
@@ -139,7 +139,7 @@ class ClothesCards extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          child: Column(
+                          child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -169,8 +169,8 @@ class ClothesCards extends StatelessWidget {
                         Expanded(child: Container()),
                         Container(
                           height: size.width * 0.1,
-                          margin: EdgeInsets.all(0),
-                          child: Column(
+                          margin: const EdgeInsets.all(0),
+                          child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
@@ -212,12 +212,12 @@ class ClothesCards extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(25.0)),
+                        const BorderRadius.vertical(top: Radius.circular(25.0)),
                     child: Image(
-                     fit: BoxFit.cover,
+                      fit: BoxFit.cover,
                       height: size.height * 0.2,
                       // width: size.width,
-                      image: AssetImage('assets/5.jpg'),
+                      image: const AssetImage('assets/5.jpg'),
                     ),
                   ),
                   SizedBox(
@@ -229,7 +229,7 @@ class ClothesCards extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          child: Column(
+                          child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
@@ -259,8 +259,8 @@ class ClothesCards extends StatelessWidget {
                         Expanded(child: Container()),
                         Container(
                           height: size.width * 0.1,
-                          margin: EdgeInsets.all(0),
-                          child: Column(
+                          margin: const EdgeInsets.all(0),
+                          child: const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
