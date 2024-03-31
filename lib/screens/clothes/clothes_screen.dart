@@ -24,13 +24,13 @@ class _ClothesScreenState extends State<ClothesScreen> {
         backgroundColor: ligthTheme.colorScheme.primary,
         elevation: 0,
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Row(
             children: [
               SizedBox(width: size.width * 0.12),
-              Icon(Icons.arrow_back_ios),
+              const Icon(Icons.arrow_back_ios),
             ],
           ),
         ),
@@ -38,17 +38,17 @@ class _ClothesScreenState extends State<ClothesScreen> {
       backgroundColor: ligthTheme.colorScheme.background,
       body: Column(
         children: [
-          Container(
+          SizedBox(
             //size of the appbar(38.1+55.1)
             height: size.height - 38.1 - 55.1,
             child: Stack(
               children: [
-                Container(child: const BottomWave()),
+                const BottomWave(),
                 Positioned(
-                        right: 0,
+                    right: 0,
                     child: ClothesSize(
-                  size: size,
-                )),
+                      size: size,
+                    )),
                 Positioned(
                   top: size.height * 0.4,
                   child: Description(size: size),

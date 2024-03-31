@@ -10,7 +10,7 @@ class Recommened extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // color: Colors.red,
       // padding: EdgeInsets.only(left: size.width * 0.05),
       height: size.height * 0.14,
@@ -18,26 +18,26 @@ class Recommened extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: [
           SizedBox(width: size.width * 0.04),
-          CircleAvatar(
+          const CircleAvatar(
             radius: 58,
             backgroundImage: AssetImage('assets/5.jpg'),
           ),
           SizedBox(width: size.width * 0.04),
-          CircleAvatar(
+          const CircleAvatar(
             radius: 58,
             backgroundImage: AssetImage('assets/5.jpg'),
           ),
           SizedBox(width: size.width * 0.04),
-          CircleAvatar(
+          const CircleAvatar(
             radius: 58,
             backgroundImage: AssetImage('assets/5.jpg'),
           ),
           SizedBox(width: size.width * 0.04),
-          CircleAvatar(
+          const CircleAvatar(
             radius: 58,
             backgroundImage: AssetImage('assets/5.jpg'),
           ),
-          VerticalDivider(),
+          const VerticalDivider(),
         ],
       ),
     );

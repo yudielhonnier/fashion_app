@@ -1,6 +1,5 @@
 import 'package:fashion_app/themes/theme_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfilehScreenState extends State<ProfileScreen> {
   final textNameController = TextEditingController();
   String username = 'Your username';
-  num counter=40;
+  num counter = 40;
 
   @override
   void dispose() {
@@ -27,11 +26,11 @@ class _ProfilehScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text(
+        title: const Text(
           'Profile',
           style: TextStyle(color: Colors.white),
         ),
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       backgroundColor: ligthTheme.colorScheme.primary,
       body: Padding(
@@ -43,7 +42,7 @@ class _ProfilehScreenState extends State<ProfileScreen> {
             SizedBox(
               height: size.height * 0.03,
             ),
-            Center(
+            const Center(
               child: CircleAvatar(
                 radius: 90,
                 backgroundImage: AssetImage('assets/6.jpg'),
@@ -62,7 +61,7 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 18),
                         child: CustomBottomSheet(
                           onUsernameChanged: (newText) {
-                          username = newText;
+                            username = newText;
                           },
                           textNameController: textNameController,
                           size: size,
@@ -70,13 +69,13 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                           counter: counter,
                         )));
               },
-              child: Container(
+              child: SizedBox(
                 height: size.height * 0.06,
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.account_circle_sharp,
                           color: Colors.white,
                         ),
@@ -92,20 +91,20 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                               SizedBox(
                                 height: size.height * 0.008,
                               ),
-                              Text(
+                              const Text(
                                 'Username',
                                 style: TextStyle(color: Colors.white),
                               ),
                               Text(
                                 username,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 17),
                               ),
                             ],
                           ),
                         ),
                         Expanded(child: Container()),
-                        Icon(
+                        const Icon(
                           Icons.edit,
                           color: Colors.white,
                         ),
@@ -115,14 +114,14 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
-            Divider(),
-            Container(
+            const Divider(),
+            SizedBox(
               height: size.height * 0.06,
               child: Column(
                 children: [
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.info_outline,
                         color: Colors.white,
                       ),
@@ -139,11 +138,11 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                             SizedBox(
                               height: size.height * 0.008,
                             ),
-                            Text(
+                            const Text(
                               'Info',
                               style: TextStyle(color: Colors.white),
                             ),
-                            Text(
+                            const Text(
                               'Write a info about you',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 17),
@@ -152,7 +151,7 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       Expanded(child: Container()),
-                      Icon(
+                      const Icon(
                         Icons.edit,
                         color: Colors.white,
                       ),
@@ -161,14 +160,14 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
-            Divider(),
-            Container(
+            const Divider(),
+            SizedBox(
               height: size.height * 0.1,
               child: Column(
                 children: [
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.phone,
                         color: Colors.white,
                       ),
@@ -185,11 +184,11 @@ class _ProfilehScreenState extends State<ProfileScreen> {
                             SizedBox(
                               height: size.height * 0.008,
                             ),
-                            Text(
+                            const Text(
                               'Phone',
                               style: TextStyle(color: Colors.white),
                             ),
-                            Text(
+                            const Text(
                               '55555555',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 17),
@@ -207,8 +206,6 @@ class _ProfilehScreenState extends State<ProfileScreen> {
       ),
     );
   }
-
-
 }
 
 class CustomBottomSheet extends StatefulWidget {
@@ -238,7 +235,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
       padding: EdgeInsets.symmetric(horizontal: widget.size.width * 0.02),
       child: Row(
         children: [
-          Container(
+          SizedBox(
             height: widget.size.height * 0.4,
             width: widget.size.width * 0.8,
             child: Column(
@@ -248,10 +245,10 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                 SizedBox(
                   height: widget.size.height * 0.02,
                 ),
-                Text(
+                const Text(
                   'Enter your username',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8.0,
                 ),
                 Padding(
@@ -259,9 +256,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                       bottom: MediaQuery.of(context).viewInsets.bottom),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'username',
-                      suffixText: '${widget.counter}'
-                    ),
+                        hintText: 'username', suffixText: '${widget.counter}'),
                     autofocus: true,
                     controller: widget.textNameController,
                     onChanged: (text) {
@@ -276,12 +271,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                     },
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
               ],
             ),
           ),
-       
-           ],
+        ],
       ),
     );
   }
